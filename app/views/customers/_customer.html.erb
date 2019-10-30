@@ -1,0 +1,15 @@
+<tr>
+<% if customer.black_list != true %>
+  <td><%= customer.name %></td>
+  <td><%= customer.phone%></td>
+  <td><%= customer.body%></td>
+  <td><%= link_to 'Show', customer_path(customer)%></td>
+  <td><%= link_to 'Edit', edit_customer_path(customer)%></td>
+  <td>
+  <%= link_to 'Man, To Black',
+              customer_path(customer),
+              method: :patch,
+              data: { confirm: 'Are You sure?' }%>
+  </td>   
+<% end %>
+</tr>
