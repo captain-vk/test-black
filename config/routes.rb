@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
     resources :customers
 
+    get '/black_list', to: 'customers#black_list', as: 'black_list'
+
 end

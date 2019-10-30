@@ -7,6 +7,12 @@ class CustomersController < ApplicationController
     @customers = Customer.all
   end
 
+  def black_list
+    if @customer.black_list = false
+         @customer.black_list == true
+    end
+  end
+  
   def show; end
 
   def edit; end
